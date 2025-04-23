@@ -1,0 +1,119 @@
+**Setting Up Java Environment and Visual Studio Code**
+
+Overview: This document outlines the step-by-step process I followed to set up a Java development environment on my PC using Visual Studio Code (VS Code). The setup ensures that I can compile, run, and debug Java applications efficiently.
+
+#Install Java Development Kit (JDK):
+
+#I downloaded and installed the latest version of the JDK from the official Oracle website (or adoptopenjdk.net).
+
+#After installation, I set the JAVA_HOME environment variable to point to the JDK installation directory.
+
+#I updated the system PATH variable by adding JAVA_HOME/bin so that Java commands (javac, java) can be executed from any command prompt.
+
+#Install Visual Studio Code:
+
+#I downloaded Visual Studio Code from the official VS Code website.
+
+#I followed the installation prompts to install VS Code on my PC.
+
+#Install Java Extensions in VS Code:
+
+#After launching VS Code, I navigated to the Extensions view (by clicking the Extensions icon on the sidebar or pressing Ctrl+Shift+X).
+
+#I installed the following key extensions for Java development: a. Language Support for Java(TM) by Red Hat (provides essential language features). b. Debugger for Java (for running and debugging Java applications). c. Java Test Runner (for executing unit tests). d. Maven for Java (optional, if using Maven for project management).
+
+#These extensions enhance code intelligence, provide debugging capabilities, and simplify project management.
+
+#Configure VS Code for Java Development:
+
+#I created a new workspace in VS Code for my Java projects.
+
+#I used the command palette (Ctrl+Shift+P) and selected "Java: Create Java Project" to initialize a new project using a template.
+
+#I verified that the generated project structure adheres to standard Java conventions (with source code located in a src folder).
+
+#I ran the build task (using Terminal -> Run Build Task or Ctrl+Shift+B) to ensure the project compiles without issues.
+
+#Running and Debugging:
+
+#I opened a Java file from the project and used the context menu to select "Run Java" to execute the application.
+
+#For debugging, I set breakpoints in the code, then pressed F5 to launch the debugger and step through the code as needed.
+
+#Conclusion: By following these steps, I successfully set up a comprehensive Java development environment in Visual Studio Code. This setup supports writing, running, and debugging Java applications seamlessly, allowing me to focus on implementing high-quality code for my projects.
+
+
+
+
+
+**Remote Health Monitoring System**
+
+#Overview: This project implements a Remote Health Monitoring System using Java and Object-Oriented Programming (OOP) concepts. It demonstrates a complete Remote Patient Monitoring System (RPMS) that is modular, robust, and built following standard industry practices.
+
+#Project Modules:
+
+##User Management:
+
+#User: Base class for all users.
+
+#Patient: Handles vital uploads, doctor feedback, and appointment scheduling.
+
+#Doctor: Enables doctors to view patient data, provide feedback, and manage appointments. (Note: Ensure the Doctor class uses composition by maintaining a list of patients.)
+
+##Administrator: Manages doctors, patients, and system logs.
+
+##Health Data Handling:
+
+#VitalSign: Stores vital health data such as heart rate, blood pressure, oxygen level, and temperature.
+
+#VitalsDatabase: Manages the storage and retrieval of patient vitals.
+
+##Appointment Scheduling:
+
+#Appointment: Stores appointment details including date, doctor, patient, and status.
+
+#AppointmentManager: Handles the scheduling, approval, and cancellation of appointments.
+
+##Doctor-Patient Interaction:
+
+#Feedback: Stores doctor feedback.
+
+#Prescription: Contains details of prescribed medications, dosage, and schedule.
+
+#MedicalHistory: Maintains a record of past consultations and prescriptions.
+
+##OOP Concepts Applied:
+
+#Encapsulation: Each class uses private fields with public getter and setter methods.
+
+#Inheritance: The User base class is extended by Patient, Doctor, and Administrator classes.
+
+#Composition: The Doctor class should maintain a list of patients.
+
+#Polymorphism: Method overloading and overriding are implemented to allow flexible behavior in subclasses.
+
+#Additional Concepts: The project also demonstrates static and final variables/methods, constructor overloading, downcasting, and the use of the instanceof operator.
+
+#Project Structure: The directory is organized as follows:
+
+#oop_assigment/ appointment_shecduling/ Appointment.java AppointmentManager.java doctor_patient_interaction/ Feedback.java MedicalHistory.java Prescription.java health_data_handling/ VitalSign.java VitalsDatabase.java usermanagement/ User.java Patient.java Doctor.java Administrator.java Main.java ScenarioTest.java README.readme
+
+How to Run:
+
+Compilation: Open a terminal in the project root directory and compile all Java files with: javac oop_assigment/**/*.java Main.java ScenarioTest.java (Adjust the command as needed depending on your directory structure.)
+
+Running the Main Class: To test the complete system, run: java Main
+
+Running Scenario Tests: To test specific scenarios (adding patients, scheduling appointments, doctor feedback, processing vitals), run: java ScenarioTest
+
+Testing Deliverables: A separate document with console screenshots is provided. It includes outputs for:
+
+Adding Patients: Creation and display of patient information.
+
+Scheduling Appointments: Managing appointments using the AppointmentManager.
+
+Doctor Feedback: Displaying feedback provided by doctors.
+
+Processing Vitals: Adding and retrieving vital signs from the VitalsDatabase.
+
+Final Remarks: This project meets the requirements for CS-212 Object Oriented Programming. It demonstrates proper use of encapsulation, inheritance, composition, polymorphism, and advanced features such as static/final members and constructor/method overloading. Please verify that the Doctor class includes a patient list to fully demonstrate composition. If it is missing, consider updating your code accordingly.
